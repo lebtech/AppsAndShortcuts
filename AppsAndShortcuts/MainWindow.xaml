@@ -1,0 +1,62 @@
+﻿<Window x:Class="AppsAndShortcuts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AppsAndShortcuts"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width=".3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="ArcTools"
+               Grid.ColumnSpan="3"/>
+        <Button Content="Device Properties" 
+                Grid.Column="0"
+                Grid.Row="1"/>
+        <Button Content="Credential Manager"
+                Grid.Column="0"
+                Grid.Row="2"/>
+        <Button Content="Skype For Business"
+                Grid.Column="0"
+                Grid.Row="3"/>
+        <Button Content="Find a Computer"
+                Grid.Column="0"
+                Grid.Row="4"/>
+        <Button Content="Find a Printer"
+                Grid.Column="0"
+                Grid.Row="5"/>
+        <Button Content="Office Quick Repair"
+                Grid.Column="0"
+                Grid.Row="6"/>
+        <Button Content="Office Online Repair"
+                Grid.Column="0"
+                Grid.Row="7"/>
+        <Button Content="Logged In User"
+                Grid.Column="0"
+                Grid.Row="8"/>
+        <Button Content="Check Watermark"
+                Grid.Column="0"
+                Grid.Row="9"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="9">
+            
+        </StackPanel>
+
+
+    </Grid>
+</Window>
