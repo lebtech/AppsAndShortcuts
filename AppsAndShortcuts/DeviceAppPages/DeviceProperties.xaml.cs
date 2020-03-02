@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AppsAndShortcuts.DeviceApps
+namespace AppsAndShortcuts.DeviceAppPages
 {
     /// <summary>
-    /// Interaction logic for CredentialManager.xaml
+    /// Interaction logic for DeviceProperties.xaml
     /// </summary>
-    public partial class CredentialManager : Page
+    public partial class DeviceProperties : Page
     {
-        public CredentialManager()
+        public DeviceProperties()
         {
             InitializeComponent();
         }

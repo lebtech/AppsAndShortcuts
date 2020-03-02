@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AppsAndShortcuts.DeviceApps
+namespace AppsAndShortcuts.UserAppPages
 {
     /// <summary>
-    /// Interaction logic for SkypeForBusiness.xaml
+    /// Interaction logic for FindAdGroups.xaml
     /// </summary>
-    public partial class SkypeForBusiness : Page
+    public partial class FindAdGroups : Page
     {
-        public SkypeForBusiness()
+        public FindAdGroups()
         {
             InitializeComponent();
         }

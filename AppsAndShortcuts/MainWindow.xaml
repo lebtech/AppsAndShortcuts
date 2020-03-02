@@ -3,17 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         xmlns:local="clr-namespace:AppsAndShortcuts"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="CanResize" MouseDown="Window_MouseDown">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".075*"/>
             <ColumnDefinition Width=".25*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1.1*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -24,39 +26,38 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Content="ArcTools"
-               Grid.ColumnSpan="3"/>
-        <Button Content="Device Properties" 
-                Grid.Column="0"
-                Grid.Row="1"/>
-        <Button Content="Credential Manager"
-                Grid.Column="0"
-                Grid.Row="2"/>
-        <Button Content="Skype For Business"
-                Grid.Column="0"
-                Grid.Row="3"/>
-        <Button Content="Find a Computer"
-                Grid.Column="0"
-                Grid.Row="4"/>
-        <Button Content="Find a Printer"
-                Grid.Column="0"
-                Grid.Row="5"/>
-        <Button Content="Office Quick Repair"
-                Grid.Column="0"
-                Grid.Row="6"/>
-        <Button Content="Office Online Repair"
-                Grid.Column="0"
-                Grid.Row="7"/>
-        <Button Content="Logged In User"
-                Grid.Column="0"
-                Grid.Row="8"/>
-        <Button Content="Check Watermark"
-                Grid.Column="0"
-                Grid.Row="9"/>
-        <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="9">
+        <Label Content="ArcTools" Grid.Column="1"/>
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Remote Device:" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
             
+            
+            <Label Content="Remote User:" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+        </Grid>
+
+        <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right">
+            <Button fa:Awesome.Content="WindowCloseOutline" Click="Exit_Button_Click" Style="{StaticResource TopLevelMenuButtons}" />
+
+
         </StackPanel>
 
+        <Frame Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="9" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
 
+        <StackPanel Grid.RowSpan="10" Grid.Column="0" Style="{StaticResource TopLevelMenu}"/>
+        <Button fa:Awesome.Content="HddOutline" Grid.Column="0" Grid.Row="1" Click="Device_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
+        <Button fa:Awesome.Content="UserCircleOutline" Grid.Column="0" Grid.Row="2" Click="User_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
+        <Button fa:Awesome.Content="NewspaperOutline" Grid.Column="0" Grid.Row="3" Click="Other_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
+        <Button fa:Awesome.Content="PlusSquareOutline" Grid.Column="0" Grid.Row="4" Click="Arc_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
+        
     </Grid>
 </Window>

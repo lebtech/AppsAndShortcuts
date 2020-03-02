@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -55,15 +58,102 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DeviceApps\CredentialManager.xaml">
+    <Compile Include="ArcAppPages\AclFinder.xaml.cs">
+      <DependentUpon>AclFinder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ArcAppPages\AddQuickFill.xaml.cs">
+      <DependentUpon>AddQuickFill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\ArcApps.xaml.cs">
+      <DependentUpon>ArcApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\OtherApps.xaml.cs">
+      <DependentUpon>OtherApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherAppPages\ChangeTickets.xaml.cs">
+      <DependentUpon>ChangeTickets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherAppPages\FindGroupMembers.xaml.cs">
+      <DependentUpon>FindGroupMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherAppPages\ProblemTickets.xaml.cs">
+      <DependentUpon>ProblemTickets.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OtherAppPages\SearchAdGroup.xaml.cs">
+      <DependentUpon>SearchAdGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppPages\FindAdGroups.xaml.cs">
+      <DependentUpon>FindAdGroups.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppPages\FindAssignedDevices.xaml.cs">
+      <DependentUpon>FindAssignedDevices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppPages\FindCryptPassword.xaml.cs">
+      <DependentUpon>FindCryptPassword.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppPages\FindMailServer.xaml.cs">
+      <DependentUpon>FindMailServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserAppPages\FindSoftware.xaml.cs">
+      <DependentUpon>FindSoftware.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ArcAppPages\AclFinder.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeviceApps\DeviceProperties.xaml">
+    <Page Include="ArcAppPages\AddQuickFill.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DeviceApps\SkypeForBusiness.xaml">
+    <Page Include="Categories\ArcApps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Categories\DeviceApps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Categories\OtherApps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Categories\UserApps.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\CheckWatermark.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\CredentialManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\DeviceProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\FindADevice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\FindAPrinter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\LoggedInUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\OfficeOnlineRepair.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\OfficeQuickRepair.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeviceAppPages\SkypeForBusiness.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,19 +165,79 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DeviceApps\CredentialManager.xaml.cs">
+    <Compile Include="Categories\DeviceApps.xaml.cs">
+      <DependentUpon>DeviceApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\UserApps.xaml.cs">
+      <DependentUpon>UserApps.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\CheckWatermark.xaml.cs">
+      <DependentUpon>CheckWatermark.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\CredentialManager.xaml.cs">
       <DependentUpon>CredentialManager.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeviceApps\DeviceProperties.xaml.cs">
+    <Compile Include="DeviceAppPages\DeviceProperties.xaml.cs">
       <DependentUpon>DeviceProperties.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DeviceApps\SkypeForBusiness.xaml.cs">
+    <Compile Include="DeviceAppPages\FindADevice.xaml.cs">
+      <DependentUpon>FindADevice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\FindAPrinter.xaml.cs">
+      <DependentUpon>FindAPrinter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\LoggedInUser.xaml.cs">
+      <DependentUpon>LoggedInUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\OfficeOnlineRepair.xaml.cs">
+      <DependentUpon>OfficeOnlineRepair.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\OfficeQuickRepair.xaml.cs">
+      <DependentUpon>OfficeQuickRepair.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceAppPages\SkypeForBusiness.xaml.cs">
       <DependentUpon>SkypeForBusiness.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="OtherAppPages\ChangeTickets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherAppPages\FindGroupMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherAppPages\ProblemTickets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="OtherAppPages\SearchAdGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAppPages\FindAdGroups.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAppPages\FindAssignedDevices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAppPages\FindCryptPassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAppPages\FindMailServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserAppPages\FindSoftware.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -107,6 +257,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -115,5 +266,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

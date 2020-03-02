@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AppsAndShortcuts.DeviceApps
+namespace AppsAndShortcuts.DeviceAppPages
 {
     /// <summary>
-    /// Interaction logic for DeviceProperties.xaml
+    /// Interaction logic for FindADevice.xaml
     /// </summary>
-    public partial class DeviceProperties : Page
+    public partial class FindADevice : Page
     {
-        public DeviceProperties()
+        public FindADevice()
         {
             InitializeComponent();
         }

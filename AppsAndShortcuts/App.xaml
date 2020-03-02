@@ -4,6 +4,20 @@
              xmlns:local="clr-namespace:AppsAndShortcuts"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="DarkCyan"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="Button" x:Key="TopLevelMenuButtons">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="StackPanel" x:Key="TopLevelMenu">
+            <Setter Property="Background" Value="LightGray"/>
+        </Style>
     </Application.Resources>
 </Application>
