@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AppsAndShortcuts.Categories"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ArcApps">
+      Title="ArcApps"
+      Style="{StaticResource CategoryPages}">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width="165"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
@@ -24,14 +24,24 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="ACL Finder" 
+        <Button Content="ACL Finder"  
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="0" 
                 Click="ACL_Finder_Button_Click"/>
 
-        <Button Content="Add Quick Fill"
+        <Button Content="Add Quick Fill" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="1"  
                 Click="Add_Quick_Fill_Button_Click"/>

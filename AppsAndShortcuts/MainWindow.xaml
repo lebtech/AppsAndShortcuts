@@ -6,11 +6,17 @@
         xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF"
         xmlns:local="clr-namespace:AppsAndShortcuts"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowStyle="None" ResizeMode="CanResize" MouseDown="Window_MouseDown">
+        
+        HorizontalContentAlignment="Stretch"
+        MinHeight="600" MinWidth="850" WindowStyle="None" MouseDown="Window_MouseDown"  
+        
+        VerticalContentAlignment="Stretch" 
+        ResizeMode="CanResizeWithGrip" AllowsTransparency="True">
+    
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".075*"/>
-            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="165"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
@@ -25,7 +31,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="11" Style="{StaticResource SubLevelMenu}"/>
         <Label Content="ArcTools" Grid.Column="1"/>
         <Grid Grid.Column="2">
             <Grid.RowDefinitions>
@@ -40,20 +48,19 @@
             </Grid.ColumnDefinitions>
 
             <Label Content="Remote Device:" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="0"/>
-            
-            
             <Label Content="Remote User:" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="1"/>
         </Grid>
+        
+        
+        <StackPanel Grid.RowSpan="11" Grid.Column="0" Style="{StaticResource TopLevelMenu}"/>
+        <StackPanel Grid.RowSpan="11" Grid.Column="1" Style="{StaticResource AppButtonBackgroundPanel}"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right">
+        <StackPanel Orientation="Horizontal" Grid.Column="3" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <Button fa:Awesome.Content="WindowMaximize" Click="Maximize_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
             <Button fa:Awesome.Content="WindowCloseOutline" Click="Exit_Button_Click" Style="{StaticResource TopLevelMenuButtons}" />
-
-
         </StackPanel>
 
-        <Frame Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="9" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
-
-        <StackPanel Grid.RowSpan="10" Grid.Column="0" Style="{StaticResource TopLevelMenu}"/>
+        <Frame Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="9" x:Name="MainFrame" NavigationUIVisibility="Hidden" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
         <Button fa:Awesome.Content="HddOutline" Grid.Column="0" Grid.Row="1" Click="Device_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
         <Button fa:Awesome.Content="UserCircleOutline" Grid.Column="0" Grid.Row="2" Click="User_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>
         <Button fa:Awesome.Content="NewspaperOutline" Grid.Column="0" Grid.Row="3" Click="Other_Apps_Button_Click" Style="{StaticResource TopLevelMenuButtons}"/>

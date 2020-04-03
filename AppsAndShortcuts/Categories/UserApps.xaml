@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AppsAndShortcuts.Categories"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="UserApps">
+      Title="UserApps"
+      Style="{StaticResource CategoryPages}">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width="165"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
@@ -24,29 +24,42 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Button Content="Find AD Groups" 
+        <Button Content="Find AD Groups"  
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="0" 
                 Click="Find_AD_Groups_Button_Click"/>
 
-        <Button Content="Find Assigned Devices"
+        <Button Content="Find Assigned Devices" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="1"  
                 Click="Find_Assigned_Devices_Button_Click"/>
 
-        <Button Content="Find Mail Server"
+        <Button Content="Find Mail Server" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="2"
                 Click="Find_Mail_Server_Button_Click"/>
 
-        <Button Content="Find RHICrypt Password"
+        <Button Content="Find RHICrypt" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="3"
                 Click="Find_RHICrypt_Password_Button_Click"/>
 
-        <Button Content="Find Software"
+        <Button Content="Find Software" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="4"
                 Click="Find_Software_Button_Click"/>

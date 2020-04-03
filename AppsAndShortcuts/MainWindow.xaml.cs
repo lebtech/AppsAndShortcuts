@@ -23,6 +23,7 @@ namespace AppsAndShortcuts
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Content = new Categories.DeviceApps();
         }
 
 
@@ -31,6 +32,18 @@ namespace AppsAndShortcuts
         {
             System.Windows.Application.Current.Shutdown();
             // Environment.Exit(0) - Force closes the process
+        }
+
+        private void Maximize_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.WindowState == System.Windows.WindowState.Normal)
+            {
+                this.WindowState = System.Windows.WindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = System.Windows.WindowState.Normal;
+            }
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -58,5 +71,7 @@ namespace AppsAndShortcuts
         {
             MainFrame.Content = new Categories.ArcApps();
         }
+
+
     }
 }

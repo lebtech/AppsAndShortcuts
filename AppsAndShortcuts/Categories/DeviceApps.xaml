@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AppsAndShortcuts.Categories"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="DeviceApps">
+      Title="DeviceApps"
+      Style="{StaticResource CategoryPages}">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".25*"/>
+            <ColumnDefinition Width="165"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width=".3*"/>
         </Grid.ColumnDefinitions>
@@ -24,49 +24,66 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <Button Content="Device Properties" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="0" 
                 Click="Device_Properties_Button_Click"/>
 
-        <Button Content="Credential Manager"
+        <Button Content="Credential Manager" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="1"  
                 Click="Credential_Manager_Button_Click"/>
 
-        <Button Content="Skype For Business"
+        <Button Content="Skype For Business" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="2"
                 Click="Skype_For_Business_Button_Click"/>
 
-        <Button Content="Find a Computer"
+        <Button Content="Find a Computer" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="3"
                 Click="Find_a_Computer_Button_Click"/>
 
-        <Button Content="Find a Printer"
+        <Button Content="Find a Printer" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="4"
                 Click="Find_a_Printer_Button_Click"/>
 
-        <Button Content="Office Quick Repair"
+        <Button Content="Office Quick Repair" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="5"
                 Click="Office_Quick_Repair_Button_Click"/>
 
-        <Button Content="Office Online Repair"
+        <Button Content="Office Online Repair" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="6"
                 Click="Office_Online_Repair_Button_Click"/>
 
-        <Button Content="Logged In User"
+        <Button Content="Logged In User" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="7"
                 Click="Logged_In_User_Button_Click"/>
 
-        <Button Content="Check Watermark"
+        <Button Content="Check Watermark" 
+                Style="{StaticResource AppButtons}"
                 Grid.Column="0"
                 Grid.Row="8"
                 Click="Check_Watermark_Button_Click"/>
