@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace AppsAndShortcuts
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AppsAndShortcuts.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AppsAndShortcuts : Window
     {
-        public MainWindow()
+        public AppsAndShortcuts()
         {
             InitializeComponent();
             MainFrame.Content = new Categories.DeviceApps();
